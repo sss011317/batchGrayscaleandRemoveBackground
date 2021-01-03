@@ -13,9 +13,9 @@ def ExcelAddAPI(res,path,sheetName):
             for b in range(len(res)):
                     sheet.write(b,a,res[b][a])
     wb.save(path)        
-    
+    print("save scuess!! the excel save as %s" %(path))
 if __name__=='__main__':
-    path = input("path:")
-    res =  input("res:")
-    sheetName = input("sheetName:")
+    res = [["type","value"],["type1","valu1"],["type2","value2"]]
+    path =  "datatest.xls"
+    sheetName = "AddTest"
     ExcelAddAPI(res,path,sheetName)
