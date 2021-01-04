@@ -2,7 +2,9 @@
 def searchFile():
     import os
     path  =input("輸入要選取的的資料夾:")
+    path = r'%s' %(path)
     pathinto = input("輸入要輸出的資料夾:")
+    pathinto = r'%s' %(pathinto)
     imagelist = os.listdir(path)#读取images文件夹下所有文件的名字
 
     functionUse = input("輸入1為灰階,輸入2為去背:")
@@ -16,9 +18,9 @@ def Grayscale(path,pathinto, imagelist):
     import cv2
     for image in imagelist:
         try:
-            pathandimage = path + image
+            pathandimage = path +"\\"+ image
             #print(pathandimage)
-            pathintoandimage = pathinto + "gray_"+ image
+            pathintoandimage = pathinto+"\\" + "gray_"+ image
             #print(">>"+pathintoandimage)
             image = cv2.imread(pathandimage)
             image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -52,6 +54,4 @@ def removeBackGroundAPI(path,pathinto,imagelist):
             print(image)
     
 if __name__=='__main__':
-    print('輸入path時 最後請多一個反斜線 ')
-    #print('檔案內不可以有file資料')
     searchFile()
