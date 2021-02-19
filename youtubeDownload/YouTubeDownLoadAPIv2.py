@@ -1,3 +1,5 @@
+#pip install pytube
+#pip install bs4
 from pytube import YouTube
 from bs4 import BeautifulSoup
 def YouTubeDownLoadAPI(web,path):

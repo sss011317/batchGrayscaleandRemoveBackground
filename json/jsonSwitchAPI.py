@@ -1,6 +1,8 @@
 ## 2021/01/03 write by Ching 
 ## link => where is your Json File
 ## DictSource => whats' your Json Types
+#pip install json
+#pip install requests
 def jsonSwitch(link,dictSource):
     import requests
     import json
