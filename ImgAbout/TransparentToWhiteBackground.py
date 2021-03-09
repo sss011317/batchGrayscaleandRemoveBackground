@@ -15,6 +15,9 @@ def changebackColor(imgfile):
     except Exception as e:
       print(e)
 if __name__=='__main__':
-    file = input("輸入要轉換的資料夾:")
-    file = r"%s" %(file)
-    get(file)
+    while True:
+        file = input("輸入要轉換的資料夾:")
+        file = r"%s" %(file)
+        get(file)
+        if file == "end":
+            break
